@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(cmd /c \"dir /b g:\\\\Projects\\\\Git\\\\TextExtractorWin\\\\bin\\\\Release\\\\net8.0-windows10.0.26100.0\\\\win-x64\\\\publish\"\")",
+      "Bash(cmd /c \"if exist g:\\\\Projects\\\\Git\\\\TextExtractorWin\\\\Assets\\\\app.ico echo Icon exists at Assets\\\\app.ico\")",
+      "Bash(dotnet build:*)",
+      "Bash(cmd /c \"if exist %LOCALAPPDATA%\\\\TextExtractorWin\\\\settings.json type %LOCALAPPDATA%\\\\TextExtractorWin\\\\settings.json\")",
+      "Bash(cmd /c \"dir %LOCALAPPDATA%\\\\TextExtractorWin\\\\ 2>&1 || echo No directory exists\")",
+      "Bash(powershell -NoProfile -Command:*)",
+      "Bash(taskkill:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(cmd /c \"cd /d g:\\\\Projects\\\\Git\\\\TextExtractorWin && dotnet build --configuration Release\")",
+      "Bash(powershell:*)"
+    ]
+  }
+}

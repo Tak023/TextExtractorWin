@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TextExtractorWin.Views.GeneralSettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TextExtractorWin.Views">
+
+    <ScrollViewer>
+        <StackPanel Spacing="4" Padding="0,0,24,24">
+            <TextBlock Text="General" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,24"/>
+
+            <!-- Startup Settings -->
+            <TextBlock Text="Startup" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <StackPanel Spacing="8" Margin="0,0,0,24">
+                <ToggleSwitch x:ConnectionId='6'
+                    x:Name="StartMinimizedToggle"
+                    Header="Start minimized to system tray"
+                                                          />
+
+                <ToggleSwitch x:ConnectionId='7'
+                    x:Name="StartWithWindowsToggle"
+                    Header="Start with Windows"
+                                                            />
+            </StackPanel>
+
+            <!-- Feedback Settings -->
+            <TextBlock Text="Feedback" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <StackPanel Spacing="8" Margin="0,0,0,24">
+                <ToggleSwitch x:ConnectionId='4'
+                    x:Name="PlaySoundToggle"
+                    Header="Play sound on capture"
+                                                     />
+
+                <ToggleSwitch x:ConnectionId='5'
+                    x:Name="ShowNotificationsToggle"
+                    Header="Show notifications"
+                                                             />
+            </StackPanel>
+
+            <!-- Clipboard Settings -->
+            <TextBlock Text="Clipboard" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <StackPanel Spacing="8" Margin="0,0,0,24">
+                <ToggleSwitch x:ConnectionId='3'
+                    x:Name="AdditiveClipboardToggle"
+                    Header="Additive clipboard mode"
+                    OnContent="Append to existing clipboard content"
+                    OffContent="Replace clipboard content"
+                                                             />
+            </StackPanel>
+
+            <!-- History Settings -->
+            <TextBlock Text="History" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <StackPanel Spacing="8">
+                <NumberBox x:ConnectionId='2'
+                    x:Name="MaxHistoryBox"
+                    Header="Maximum history items"
+                    Minimum="10"
+                    Maximum="500"
+                    SpinButtonPlacementMode="Inline"
+                    SmallChange="10"
+                    LargeChange="50"
+                                                             />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

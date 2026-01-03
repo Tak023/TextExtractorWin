@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TextExtractorWin.Views.SpeechSettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TextExtractorWin.Views">
+
+    <ScrollViewer>
+        <StackPanel Spacing="4" Padding="0,0,24,24">
+            <TextBlock Text="Text-to-Speech" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,24"/>
+
+            <!-- Voice Selection -->
+            <TextBlock Text="Voice" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <ComboBox x:ConnectionId='2'
+                x:Name="VoiceComboBox"
+                Header="Select voice"
+                Width="300"
+                                                                 
+                Margin="0,0,0,24"/>
+
+            <!-- Speech Rate -->
+            <TextBlock Text="Speech Rate" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <StackPanel Spacing="8" Margin="0,0,0,24">
+                <Slider x:ConnectionId='5'
+                    x:Name="SpeechRateSlider"
+                    Minimum="0.5"
+                    Maximum="3.0"
+                    StepFrequency="0.1"
+                    Width="300"
+                    HorizontalAlignment="Left"
+                                                                />
+
+                <TextBlock x:ConnectionId='6' x:Name="SpeechRateText" Text="1.0x"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+            </StackPanel>
+
+            <!-- Test -->
+            <TextBlock Text="Test" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,12"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button x:ConnectionId='3' x:Name="TestButton" Content="Test Voice"                         />
+                <Button x:ConnectionId='4' x:Name="StopButton" Content="Stop"                         />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

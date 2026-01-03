@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="TextExtractorWin.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TextExtractorWin">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Custom Colors -->
+            <Color x:Key="AccentColor">#6366F1</Color>
+            <Color x:Key="AccentColorLight">#818CF8</Color>
+            <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
+            <SolidColorBrush x:Key="AccentBrushLight" Color="{StaticResource AccentColorLight}" />
+
+            <!-- Selection Overlay Colors -->
+            <Color x:Key="OverlayBackgroundColor">#80000000</Color>
+            <Color x:Key="SelectionBorderColor">#FFFFFF</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
